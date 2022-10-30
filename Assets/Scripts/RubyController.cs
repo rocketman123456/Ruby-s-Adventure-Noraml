@@ -9,7 +9,13 @@ public class RubyController : MonoBehaviour
     public float runningSpeed = 4.0f;
 
     public int maxHealth = 5;
+
+    public int health { get { return currentHealth; } }
     int currentHealth;
+
+    public float timeInvincible = 2.0f;
+    float invincibleTimer = 0.0f;
+    bool isInvincible = false;
 
     Rigidbody2D rigidbody2d;
     Vector2 velocity;
@@ -33,6 +39,13 @@ public class RubyController : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
         velocity = new Vector2(horizontal, vertical);
         velocity = velocity.normalized;
+
+        if (isInvincible)
+        {
+            invincibleTimer -= Time.deltaTime;
+            if (invincibleTimer < 0)
+                isInvincible = false;
+        }
     }
 
     void FixedUpdate()
@@ -53,6 +66,15 @@ public class RubyController : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
+        if (amount < 0)
+        {
+            if (isInvincible)
+                return;
+
+            isInvincible = true;
+            invincibleTimer = timeInvincible;
+        }
+
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
     }
