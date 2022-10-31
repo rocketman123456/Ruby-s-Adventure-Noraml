@@ -108,7 +108,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 150
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -138,7 +138,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 1024
@@ -150,7 +150,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 1024
@@ -162,7 +162,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 1024
@@ -174,7 +174,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -351,9 +351,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 513.2
+        y: 512
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,9 +372,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 513.2
+        y: 512
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -393,9 +393,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 513.2
+        y: 512
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -414,9 +414,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 513.2
+        y: 512
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,9 +435,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 258.2
+        y: 255
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -456,9 +456,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 258.2
+        y: 256
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -477,9 +477,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 258.2
+        y: 256
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,9 +498,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 258.2
+        y: 256
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -519,9 +519,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3.199997
+        y: 0
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -540,7 +540,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 256
-        y: 5
+        y: 0
         width: 256
         height: 256
       alignment: 7
@@ -561,9 +561,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 512
-        y: 3.199997
+        y: 0
         width: 256
-        height: 255.8
+        height: 256
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
