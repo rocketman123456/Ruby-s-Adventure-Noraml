@@ -26,6 +26,8 @@ public class RubyController : MonoBehaviour
 
     Animator animator;
 
+    AudioSource audioSource;
+
     public GameObject projectilePrefab;
 
     // Start is called before the first frame update
@@ -34,6 +36,7 @@ public class RubyController : MonoBehaviour
         // Get Components
         rigidbody2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
 
         // set data
         currentHealth = maxHealth;
@@ -75,6 +78,20 @@ public class RubyController : MonoBehaviour
         {
             Launch();
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            RaycastHit2D hit = Physics2D.Raycast(rigidbody2d.position + Vector2.up * 0.2f, lookDirection, 1.5f, LayerMask.GetMask("NPC"));
+            if (hit.collider != null)
+            {
+                Debug.Log("Raycast has hit the object " + hit.collider.gameObject);
+                NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
+                if (character != null)
+                {
+                    character.DisplayDialog();
+                }
+            }
+        }
     }
 
     void FixedUpdate()
@@ -97,13 +114,13 @@ public class RubyController : MonoBehaviour
         animator.SetFloat("Look Y", lookDirection.y);
     }
 
-    public void ChangeHealth(int amount)
+    public bool ChangeHealth(int amount)
     {
         if (amount < 0)
         {
             animator.SetTrigger("Hit");
             if (isInvincible)
-                return;
+                return false;
 
             isInvincible = true;
             invincibleTimer = timeInvincible;
@@ -111,5 +128,11 @@ public class RubyController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+        return true;
+    }
+
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
     }
 }
